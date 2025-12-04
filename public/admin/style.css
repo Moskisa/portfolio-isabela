@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #A569BD;
+    --primary-dark: #905C9F;
+    --secondary-bg: #343a40;
+    --dark-bg: #212529;
+    --text-color-light: #f8f9fa;
+}
+
+.bg-portfolio-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-portfolio-dark {
+    background-color: var(--dark-bg) !important;
+}
+
+.bg-portfolio-secondary {
+    background-color: var(--secondary-bg) !important;
+}
+
+.btn-portfolio-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-portfolio-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.nav-admin {
+    background-color: var(--dark-bg) !important;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.admin-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.admin-card-header {
+    background: linear-gradient(135deg, var(--dark-bg), var(--secondary-bg));
+    color: white;
+    border-radius: 10px 10px 0 0 !important;
+}

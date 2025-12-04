@@ -1,0 +1,143 @@
+/*Cores*/
+:root {
+    --primary-color: #A569BD; 
+    --secondary-bg: #343a40;
+    --dark-bg: #212529;
+    --text-color-light: #f8f9fa;
+}
+
+/* Hover em Links (Menu e Redes Sociais) */
+.navbar .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+#eu .social-icons a:hover,
+#contact .social-icons a:hover {
+    color: var(--primary-color) !important; 
+}
+
+/* Hover em Botão (customização de cor) */
+.btn-primary:hover {
+    background-color: #905C9F; 
+    border-color: #905C9F;
+}
+
+/* Hover em Habilidades */
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(165, 105, 189, 0.6); 
+}
+
+/* Hover no Cartão do Portfólio */
+#portfolio .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Linha do Tempo */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Linha central */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Círculos da linha do tempo */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--primary-color);
+    border: 4px solid var(--dark-bg);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+/* Triângulo à esquerda */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--secondary-bg);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--secondary-bg);
+}
+
+/* Triângulo à direita */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--secondary-bg);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--secondary-bg) transparent transparent;
+}
+
+/* Reposiciona o círculo no lado direito */
+.right::after {
+    left: -16px;
+}
+
+/* Responsividade da Linha do Tempo */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::before {
+        left: 60px;
+        border: medium solid var(--secondary-bg);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--secondary-bg) transparent transparent;
+    }
+
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
